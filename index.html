@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Five days to Omarchy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/inkblade.css"/>
+  <link rel="stylesheet" href="assets/css/hub.css"/>
+</head>
+<body class="hub">
+  <header class="hub-hero">
+    <p class="overline">Ian McMurray · Onboarding</p>
+    <h1>Five days to Omarchy.</h1>
+    <p class="lede">Fifteen minutes an evening. A keyboard-first Linux, taught from the live Quattro manual — not a BIOS walkthrough.</p>
+  </header>
+  <main class="hub-wrap">
+    <section class="days" aria-label="The five days">
+      <a class="day-card" href="day-1/">
+        <span class="n">Day 01 · Record first</span>
+        <h2>Intro</h2>
+        <p>Adventure, not BIOS. Super, the menu, two windows tiling, and where to shout for help.</p>
+        <span class="go">Open deck →</span>
+      </a>
+      <a class="day-card" href="day-2/">
+        <span class="n">Day 02</span>
+        <h2>Navigation</h2>
+        <p>Dwindle, workspaces, scratchpad, pop, float. The keyboard becomes the mouse.</p>
+        <span class="go">Open deck →</span>
+      </a>
+      <a class="day-card" href="day-3/">
+        <span class="n">Day 03</span>
+        <h2>Work</h2>
+        <p>Top bar, unified clipboard, screenshots, recordings, the apps you actually live in.</p>
+        <span class="go">Open deck →</span>
+      </a>
+      <a class="day-card" href="day-4/">
+        <span class="n">Day 04</span>
+        <h2>Make it yours</h2>
+        <p>Theme picker, Inkblade as a worked example, ~/.config versus the package.</p>
+        <span class="go">Open deck →</span>
+      </a>
+      <a class="day-card" href="day-5/">
+        <span class="n">Day 05</span>
+        <h2>Own it</h2>
+        <p>omarchy CLI, agents and Herdr, snapshots, the encryption bargain. Series close.</p>
+        <span class="go">Open deck →</span>
+      </a>
+    </section>
+
+    <div class="how">
+      <div>
+        <h3>How to present</h3>
+        <ul>
+          <li>Each day is a webpage. Open it, hit F (or F11) for 1920×1080.</li>
+          <li>Space / Right / Enter next. Left / Backspace back. Home / End.</li>
+          <li>S or P opens presenter notes (current, next, elapsed). Keep that off-camera.</li>
+          <li>Click advances; right-click goes back. Esc leaves fullscreen.</li>
+          <li>Keycaps are keys. Talk. The slides stay sparse on purpose.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Record Day 1 tomorrow</h3>
+        <p>Full flow — OBS, hide chrome, suggested title and description — lives in <a href="RECORDING.md">RECORDING.md</a>.</p>
+        <p>Timed speaker scripts: <a href="scripts/day-1.md">day-1.md</a> through <a href="scripts/day-5.md">day-5.md</a>. Day 1 is the most polished; record it first.</p>
+        <p>Hotkeys were checked against the Quattro manual at <a href="https://omarchy.org/manual/">omarchy.org/manual</a>. If a binding isn’t there, it isn’t on a slide.</p>
+      </div>
+    </div>
+
+    <section class="series">
+      <h3>Run locally</h3>
+      <p>From this folder:</p>
+      <code class="cmd-block">python3 -m http.server 8080</code>
+      <p style="margin-top:1em">Then open <span class="cmd">http://localhost:8080</span>. Or open the HTML files directly — no backend, no login.</p>
+    </section>
+
+    <footer class="foot">
+      <span>Inkblade palette · sumi, newsprint, rare crimson</span>
+      <span><a href="https://github.com/imcmurray/omarchy-onboarding">github.com/imcmurray/omarchy-onboarding</a></span>
+    </footer>
+  </main>
+</body>
+</html>
