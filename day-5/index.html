@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Day 5 · Own it — Omarchy onboarding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/inkblade.css"/>
+  <link rel="stylesheet" href="../assets/css/deck.css"/>
+</head>
+<body class="deck" data-day="5" data-title="Advanced">
+  <div class="stage">
+    <div class="ink-corner tl"></div>
+    <div class="ink-corner br"></div>
+    <div class="chrome">
+      <div class="progress"><i></i></div>
+      <div class="meta"><span class="day">Day 5</span><span class="count"></span></div>
+      <div class="hint">Space next · S notes · F full</div>
+    </div>
+    <div class="slides">
+<section class="slide title-card active" data-notes="Last episode. More altitude, still sparse. Permission to go deeper, not a dump of every omarchy --help group.">
+  <img class="hero-img" src="../assets/img/0-combat.jpg" alt="" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/imcmurray/omarchy-inkblade-theme/main/backgrounds/0-combat.jpg'"/>
+  <p class="overline">Day 5 · Fifteen minutes</p>
+  <h1>Own it.</h1>
+  <p class="lede">CLI, agents, themes of your own, and the safety net under the floor.</p>
+</section>
+<section class="slide" data-notes="Common: theme list/set, pkg add/drop, screenshot, debug, update. Every group takes --help.">
+  <p class="overline">Command center</p>
+  <h2>Type omarchy. Then tab.</h2>
+  <code class="cmd-block">omarchy
+omarchy theme set inkblade
+omarchy pkg add cowsay
+omarchy update</code>
+  <p class="sub">Every group takes --help. Agents can drive this. That's the point.</p>
+</section>
+<section class="slide" data-notes="Setup → Defaults → Agent. Herdr prefix is Ctrl+Space like tmux. Super+Ctrl+K for its cheatsheet. Omarchy skill is experimental — plan mode first.">
+  <p class="overline">AI, first-class</p>
+  <h2>Pick an agent. Don't download until you run it.</h2>
+  <div class="hotkey-row">
+    <div class="pair"><span class="lbl">Default agent</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Shift</kbd><span class="plus">+</span><kbd class="wide">Ctrl</kbd><span class="plus">+</span><kbd>A</kbd></span></div>
+    <div class="pair"><span class="lbl">Herdr workspace</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Ctrl</kbd><span class="plus">+</span><kbd class="wide">Return</kbd></span></div>
+  </div>
+  <p class="sub">Stubs in ~/.local/bin. a for the default, c / cx / cy for OpenCode, Claude, Codex.</p>
+</section>
+<section class="slide" data-notes="Aether: Super+Alt+Space (apps menu). Distribute as omarchy-[name]-theme.">
+  <p class="overline">A theme of your own</p>
+  <h2>Aether, or a folder.</h2>
+  <ul class="sparse">
+    <li>Copy a theme from /usr/share/omarchy/themes → ~/.config/omarchy/themes</li>
+    <li>Edit colors.toml — that's the palette everything is generated from</li>
+    <li>Or open Aether from the apps menu and paint</li>
+  </ul>
+</section>
+<section class="slide" data-notes="Super+Backspace = transparency, Super+Shift+Backspace = toggle gaps — both in the hotkeys chapter.">
+  <p class="overline">Small, legal tweaks</p>
+  <ul class="sparse">
+    <li>Gaps and rounding: looknfeel.lua</li>
+    <li>Bar position: drag it, or omarchy bar position bottom</li>
+    <li>Hide the bar: <span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Shift</kbd><span class="plus">+</span><kbd class="wide">Space</kbd></span></li>
+  </ul>
+  <p class="sub">Common tweaks live in the manual. Updates may park your edit in a .bak if they have to restore a file.</p>
+</section>
+<section class="slide" data-notes="Caps Lock is Compose, not caps — a FAQ, not a bug.">
+  <p class="overline">When it breaks</p>
+  <h2>#omarchy-help, then the levers.</h2>
+  <ul class="sparse">
+    <li><span class="cmd">omarchy debug</span> — share that, not a vibe</li>
+    <li>Boot a snapshot from Limine</li>
+    <li><span class="cmd">omarchy reinstall configs</span> if the files are the mess</li>
+  </ul>
+</section>
+<section class="slide" data-notes="Personal files are not Time Machine. ~/.config survives a rollback. Limine default since 2.0.">
+  <p class="overline">Snapshots</p>
+  <p class="one-line">Updates snapshot for you. /root rolls back. /home does not.</p>
+  <p class="sub">omarchy-snapshot create when you want your own. Restore from Limine, or omarchy-snapshot restore once you're inside.</p>
+</section>
+<section class="slide" data-notes="If the machine can be lost, encrypt. Ctrl+C on disk confirm is for throwaways.">
+  <p class="overline">The bargain</p>
+  <h2>Encryption is the lock. Auto-login is the door.</h2>
+  <ul class="sparse">
+    <li>LUKS at boot is the security model</li>
+    <li>That's why a Bluetooth keyboard can't unlock the disk</li>
+    <li>Firewall on; incoming closed except SSH and LocalSend</li>
+  </ul>
+</section>
+<section class="slide" data-notes="Free-space install, BitLocker off. Intel Macs supported; M-series is Asahi / #omarchy-on-other.">
+  <p class="overline">Elsewhere</p>
+  <h2>Dual-boot. Intel Macs. Other people's machines.</h2>
+  <p class="sub">Free-space install beside Windows — BitLocker off first. Intel Macs are supported. M-series and odd hardware live in Discord #omarchy-on-other.</p>
+</section>
+<section class="slide" data-notes="Extra shelf at omarchy.org/themes. PR to omacom-io/omarchy-site to be listed.">
+  <p class="overline">More looks</p>
+  <p class="one-line">omarchy.org/themes</p>
+  <p class="sub">Install from a git URL. Ship your own as omarchy-[name]-theme. The extra list takes a pull request.</p>
+</section>
+<section class="slide" data-notes="Let this breathe. Day 5 is the permission slip.">
+  <p class="overline">Five evenings</p>
+  <h2>You have a beautiful Linux.</h2>
+  <ul class="sparse">
+    <li>Day 1 — Super, the menu, two windows</li>
+    <li>Day 2 — you move without pointing</li>
+    <li>Day 3 — you work, you capture, you paste</li>
+    <li>Day 4 — it looks like you</li>
+  </ul>
+</section>
+<section class="slide" data-notes="Tiny fork: change accent in colors.toml. That's a theme.">
+  <p class="overline">Homework · keep going</p>
+  <ol class="hw">
+    <li>One tweak in ~/.config that you'll still want in a month.</li>
+    <li>Install a second extra theme — or fork Inkblade and break it on purpose.</li>
+  </ol>
+</section>
+<section class="slide" data-notes="Three URLs. Thank them. Hold.">
+  <p class="overline">Don't memorize the rest</p>
+  <p class="one-line">Super+K, then the manual.</p>
+  <p class="sub">omarchy.org/manual · Discord #omarchy-help · omarchy.org/themes</p>
+</section>
+<section class="slide close-card" data-notes="Hold the frame. End.">
+  <p class="overline">Series</p>
+  <h2>omarchy.org/manual</h2>
+  <p class="lede">Now go make it yours.</p>
+  <p class="footnote">Ian McMurray · Five days to Omarchy · Day 5 of 5</p>
+</section>
+    </div>
+  </div>
+  <script src="../assets/js/deck.js"></script>
+</body>
+</html>
