@@ -1,0 +1,290 @@
+/* 16:9 presentation stage — camera-ready at 1920×1080 */
+body.deck {
+  overflow: hidden;
+  background: var(--darker);
+  cursor: default;
+  user-select: none;
+}
+body.deck.notes-open { cursor: auto; }
+
+.stage {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(100vw, calc(100vh * 16 / 9));
+  height: min(100vh, calc(100vw * 9 / 16));
+  background: var(--bg);
+  container-type: size;
+  container-name: stage;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 80% at 80% 110%, rgba(196,30,58,.07), transparent 42%),
+    radial-gradient(90% 70% at -10% -20%, rgba(0,0,0,.45), transparent 50%);
+  z-index: 1;
+}
+
+.chrome {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+.progress {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: color-mix(in srgb, var(--fg) 8%, transparent);
+}
+.progress > i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  transition: width .35s cubic-bezier(.2,.7,.2,1);
+}
+.meta {
+  position: absolute;
+  left: 2.4cqw;
+  bottom: 2.2cqh;
+  display: flex;
+  align-items: baseline;
+  gap: 1.1em;
+  font-family: var(--font-label);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  font-size: 1.35cqh;
+  color: var(--muted);
+}
+.meta .day { color: var(--accent); font-weight: 600; }
+.meta .count { letter-spacing: .16em; }
+.hint {
+  position: absolute;
+  right: 2.4cqw;
+  bottom: 2.2cqh;
+  font-family: var(--font-label);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: 1.2cqh;
+  color: color-mix(in srgb, var(--muted) 80%, transparent);
+}
+
+.slides { position: absolute; inset: 0; z-index: 5; }
+.slide {
+  position: absolute;
+  inset: 0;
+  display: none;
+  padding: 9cqh 8cqw 10cqh;
+  color: var(--fg);
+}
+.slide.active { display: flex; flex-direction: column; justify-content: center; }
+.slide.top { justify-content: flex-start; padding-top: 11cqh; }
+.slide.title-card {
+  justify-content: flex-end;
+  padding: 0 8cqw 14cqh;
+  overflow: hidden;
+}
+.slide.title-card .hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .72;
+  filter: saturate(.85) contrast(1.05);
+}
+.slide.title-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(8,7,7,.2) 0%, rgba(18,17,16,.45) 38%, rgba(8,7,7,.88) 100%);
+}
+.slide.title-card > *:not(.hero-img) {
+  position: relative;
+  z-index: 2;
+}
+.slide.title-card .overline { color: var(--red); }
+.slide.close-card { text-align: left; }
+
+h1, h2, .display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-optical-sizing: auto;
+  letter-spacing: -.02em;
+  color: var(--bright);
+  margin: 0;
+  line-height: .95;
+}
+.slide h1 {
+  font-size: clamp(42px, 9.2cqh, 108px);
+  max-width: 18ch;
+}
+.slide h2 {
+  font-size: clamp(34px, 7.2cqh, 84px);
+  max-width: 16ch;
+  margin-bottom: .28em;
+}
+.lede {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(22px, 3.6cqh, 42px);
+  color: var(--paper);
+  max-width: 28ch;
+  line-height: 1.25;
+  margin: .5em 0 0;
+}
+.sub {
+  margin-top: .7em;
+  font-size: clamp(16px, 2.5cqh, 28px);
+  color: var(--muted);
+  max-width: 42ch;
+  line-height: 1.45;
+}
+
+ul.sparse {
+  list-style: none;
+  margin: .9em 0 0;
+  padding: 0;
+  max-width: 36ch;
+}
+ul.sparse li {
+  position: relative;
+  padding: .28em 0 .28em 1.1em;
+  font-size: clamp(18px, 3.1cqh, 34px);
+  line-height: 1.3;
+  color: var(--fg);
+}
+ul.sparse li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .72em;
+  width: .42em; height: 2px;
+  background: var(--accent);
+}
+ul.sparse li + li { border-top: 1px solid var(--hairline); }
+
+.one-line {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5.6cqh, 64px);
+  line-height: 1.15;
+  max-width: 18ch;
+  color: var(--bright);
+}
+
+.hotkey-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4cqw 2.4cqw;
+  margin-top: 1.4em;
+}
+.hotkey-row .pair {
+  display: flex;
+  flex-direction: column;
+  gap: .35em;
+  min-width: 18cqw;
+}
+.hotkey-row .pair span.lbl {
+  font-family: var(--font-label);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-size: 1.5cqh;
+  color: var(--muted);
+}
+.hotkey-row .keys kbd { font-size: clamp(14px, 2.4cqh, 26px); padding: .28em .55em .22em; }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3cqw;
+  margin-top: 1.2em;
+  align-items: start;
+}
+.card {
+  background: var(--lighter);
+  border: 1px solid var(--hairline);
+  padding: 1.4em 1.5em 1.3em;
+}
+.card h3 {
+  font-family: var(--font-label);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  font-size: 1.5cqh;
+  color: var(--accent);
+  margin: 0 0 .6em;
+  font-weight: 600;
+}
+.card p { margin: 0; font-size: clamp(16px, 2.4cqh, 26px); line-height: 1.4; color: var(--fg); }
+
+table.translate {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  font-size: clamp(15px, 2.4cqh, 26px);
+}
+table.translate th {
+  font-family: var(--font-label);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-size: .72em;
+  color: var(--muted);
+  text-align: left;
+  font-weight: 600;
+  padding: .4em .6em .5em 0;
+  border-bottom: 1px solid var(--hairline);
+}
+table.translate td {
+  padding: .55em .6em .55em 0;
+  border-bottom: 1px solid var(--hairline);
+  vertical-align: middle;
+}
+table.translate td:first-child { color: var(--muted); }
+table.translate kbd { font-size: .78em; }
+
+.hw {
+  margin-top: 1em;
+  padding-left: 0;
+  counter-reset: hw;
+  list-style: none;
+}
+.hw li {
+  counter-increment: hw;
+  display: flex;
+  gap: .7em;
+  align-items: baseline;
+  font-size: clamp(18px, 3cqh, 32px);
+  padding: .35em 0;
+}
+.hw li::before {
+  content: counter(hw, decimal-leading-zero);
+  font-family: var(--font-label);
+  letter-spacing: .12em;
+  color: var(--accent);
+  font-size: .72em;
+}
+
+.footnote {
+  margin-top: auto;
+  padding-top: 1.4em;
+  font-size: clamp(13px, 1.8cqh, 18px);
+  color: var(--muted);
+  letter-spacing: .04em;
+}
+
+body.deck.fs .hint { opacity: 0; }
+
+@media (max-width: 900px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .slide h1 { max-width: none; }
+}
