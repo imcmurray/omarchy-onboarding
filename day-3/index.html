@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Day 3 · Work — Omarchy onboarding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/inkblade.css"/>
+  <link rel="stylesheet" href="../assets/css/deck.css"/>
+</head>
+<body class="deck" data-day="3" data-title="Work">
+  <div class="stage">
+    <div class="ink-corner tl"></div>
+    <div class="ink-corner br"></div>
+    <div class="chrome">
+      <div class="progress"><i></i></div>
+      <div class="meta"><span class="day">Day 3</span><span class="count"></span></div>
+      <div class="hint">Space next · S notes · F full</div>
+    </div>
+    <div class="slides">
+<section class="slide title-card active" data-notes="Day 2 was moving. Day 3 is doing actual work. Keep it a survey, not a user-manual for Neovim.">
+  <img class="hero-img" src="../assets/img/0-combat.jpg" alt="" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/imcmurray/omarchy-inkblade-theme/main/backgrounds/0-combat.jpg'"/>
+  <p class="overline">Day 3 · Fifteen minutes</p>
+  <h1>Work.</h1>
+  <p class="lede">The bar, the clipboard, the capture keys, the apps you live in.</p>
+</section>
+<section class="slide" data-notes="Not waybar anymore in Quattro — it's the Omarchy shell. Left: logo + workspaces. Center: clock, weather, update badge. Right: tray, agents, bluetooth, network, audio, display, power. Super+Shift+Space hides the bar; panels keep working.">
+  <p class="overline">The strip</p>
+  <h2>The top bar is the shell.</h2>
+  <p class="sub">Quickshell draws the bar, the menu, notifications, OSD, and the lock screen. One process. That's why it themes as one piece.</p>
+</section>
+<section class="slide" data-notes="Every widget also has left/right/middle click — skip the full table. Super+Ctrl+1–9 toggles the nth right-side panel. Calendar is Super+Ctrl+Alt+D.">
+  <p class="overline">Panels, not tooltips</p>
+  <div class="hotkey-row">
+    <div class="pair"><span class="lbl">Audio</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Ctrl</kbd><span class="plus">+</span><kbd>A</kbd></span></div>
+    <div class="pair"><span class="lbl">Network</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Ctrl</kbd><span class="plus">+</span><kbd>W</kbd></span></div>
+    <div class="pair"><span class="lbl">Bluetooth</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Ctrl</kbd><span class="plus">+</span><kbd>B</kbd></span></div>
+    <div class="pair"><span class="lbl">Display / Power</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Ctrl</kbd><span class="plus">+</span><kbd>D</kbd></span> <span class="keys"><kbd>P</kbd></span></div>
+  </div>
+  <p class="sub">Arrows, Return, Tab, Esc. You never have to aim at a 16-pixel glyph.</p>
+</section>
+<section class="slide" data-notes="This is the slide Windows and Mac people both exhale on. History holds text and images. Select, Return, then Super+V. Agent harnesses: Ctrl+V pastes images, Super+V pastes text — one-liner only.">
+  <p class="overline">Clipboard</p>
+  <h2>One copy. Even in the terminal.</h2>
+  <div class="hotkey-row">
+    <div class="pair"><span class="lbl">Copy / cut / paste</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd>C</kbd></span> <span class="keys"><kbd>X</kbd></span> <span class="keys"><kbd>V</kbd></span></div>
+    <div class="pair"><span class="lbl">History</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Ctrl</kbd><span class="plus">+</span><kbd>V</kbd></span></div>
+  </div>
+  <p class="sub">No Ctrl+Shift+C folklore. Super+X is cut, except in the terminal.</p>
+</section>
+<section class="slide" data-notes="Screen freezes, drag a region or click a window. Recording first asks which audio (none / desktop / +mic / +webcam). Hit the hotkey again to stop. Super+Print Screen = color picker. Super+Ctrl+Print Screen = OCR to clipboard. Don't demo OCR unless extra time.">
+  <p class="overline">Capture</p>
+  <h2>Print Screen is a camera.</h2>
+  <div class="hotkey-row">
+    <div class="pair"><span class="lbl">Screenshot</span><span class="keys"><kbd class="wide">Print Screen</kbd></span></div>
+    <div class="pair"><span class="lbl">Record</span><span class="keys"><kbd class="wide">Alt</kbd><span class="plus">+</span><kbd class="wide">Print Screen</kbd></span></div>
+    <div class="pair"><span class="lbl">No PrtScn key?</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Ctrl</kbd><span class="plus">+</span><kbd>C</kbd></span></div>
+  </div>
+  <p class="sub">Shot lands on disk and on the clipboard. Click the notification to annotate.</p>
+</section>
+<section class="slide" data-notes="Silence: Super+Ctrl+comma. Super+Ctrl+Alt+R lists reminders, Super+Ctrl+Shift+R clears. Notices (time/battery/weather as a toast) are optional colour — Super+Ctrl+Alt+T/B/W.">
+  <p class="overline">Notifications &amp; time</p>
+  <div class="hotkey-row">
+    <div class="pair"><span class="lbl">Dismiss / all</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd>,</kbd></span> <span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Shift</kbd><span class="plus">+</span><kbd>,</kbd></span></div>
+    <div class="pair"><span class="lbl">History</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Shift</kbd><span class="plus">+</span><kbd class="wide">Alt</kbd><span class="plus">+</span><kbd>,</kbd></span></div>
+    <div class="pair"><span class="lbl">Reminder</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Ctrl</kbd><span class="plus">+</span><kbd>R</kbd></span></div>
+  </div>
+  <p class="sub">Invoke the last notification with Super+Alt+comma. CLI: omarchy reminder 7 'Tea ready'.</p>
+</section>
+<section class="slide" data-notes="Reaffirm Day 1. Super+K shows what's bound. Bindings live in ~/.config/hypr/bindings.lua — that's tomorrow.">
+  <p class="overline">Launchers</p>
+  <h2>Menu for discovery. Hotkeys for home.</h2>
+  <div class="hotkey-row">
+    <div class="pair"><span class="lbl">Everything</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Space</kbd></span></div>
+    <div class="pair"><span class="lbl">Apps only</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Alt</kbd><span class="plus">+</span><kbd class="wide">Space</kbd></span></div>
+    <div class="pair"><span class="lbl">Cheatsheet</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd>K</kbd></span></div>
+  </div>
+  <p class="sub">The menu is not how you should launch the terminal on a Tuesday.</p>
+</section>
+<section class="slide" data-notes="Survey, 20 seconds each. Don't teach vim. Point at ThePrimeagen if they want the editor. Files: Super+Shift+F. Obsidian: Super+Shift+O. Activity/btop: Super+Ctrl+T.">
+  <p class="overline">Where work happens</p>
+  <div class="grid-2">
+    <div class="card"><h3>Terminal</h3><p>Super+Return. Foot by default. Ghostty / Kitty via Install → Terminal.</p></div>
+    <div class="card"><h3>Neovim</h3><p>Super+Shift+N, or type n in a directory. LazyVim. Leader is Space.</p></div>
+    <div class="card"><h3>Browser</h3><p>Super+Shift+Return. Chromium, themed. Private: Super+Shift+Alt+B.</p></div>
+    <div class="card"><h3>OBS</h3><p>From the menu. This is how the Omarchy screencasts — and this series — get made.</p></div>
+  </div>
+</section>
+<section class="slide" data-notes="Don't tour gaming or the Windows VM. Those exist; the manual has them. Package manager replaces the App Store reflex.">
+  <p class="overline">Also on the machine</p>
+  <ul class="sparse">
+    <li>LibreOffice, Kdenlive, Obsidian, Signal</li>
+    <li>LocalSend as AirDrop — <span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Ctrl</kbd><span class="plus">+</span><kbd>S</kbd></span></li>
+    <li>Install → Package or <span class="cmd">omarchy pkg add</span></li>
+  </ul>
+</section>
+<section class="slide" data-notes="One-liners. Super+Print Screen eyedropper, colour lands on the clipboard. Super+Ctrl+Print Screen OCRs a region. Dictation is Install → AI → Dictation, then F9 push-to-talk or Super+Ctrl+X to toggle. Don't demo unless extra time.">
+  <p class="overline">Grab more than pixels</p>
+  <h2>Colour, text, a voice.</h2>
+  <ul class="sparse">
+    <li>Super + Print Screen — eyedropper</li>
+    <li>Super + Ctrl + Print Screen — OCR to clipboard</li>
+    <li>Dictation is optional: Install → AI → Dictation</li>
+  </ul>
+</section>
+<section class="slide" data-notes="Bar is always there; Super+Shift+Space hides it. Reminders if they take tea breaks.">
+  <p class="overline">Recap</p>
+  <h2>Work is a handful of keys.</h2>
+  <div class="hotkey-row">
+    <div class="pair"><span class="lbl">Copy anywhere</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd>C</kbd></span> <span class="keys"><kbd>V</kbd></span></div>
+    <div class="pair"><span class="lbl">History</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Ctrl</kbd><span class="plus">+</span><kbd>V</kbd></span></div>
+    <div class="pair"><span class="lbl">Shot / rec</span><span class="keys"><kbd class="wide">Print Screen</kbd></span> <span class="keys"><kbd class="wide">Alt</kbd><span class="plus">+</span><kbd class="wide">Print Screen</kbd></span></div>
+  </div>
+</section>
+<section class="slide" data-notes="The terminal copy is the conversion moment. If recording audio-picker feels long, skip webcam.">
+  <p class="overline">Homework</p>
+  <h2>Capture something real.</h2>
+  <ol class="hw">
+    <li>Take a screenshot. Paste it with Super+V.</li>
+    <li>Record thirty seconds. Stop with the same hotkey.</li>
+    <li>Copy from the terminal with Super+C. Believe it.</li>
+  </ol>
+</section>
+<section class="slide" data-notes="This is the fun episode. Tease the install URL for Inkblade — don't type it yet.">
+  <p class="overline">Tomorrow · Day 4</p>
+  <p class="one-line">Make it yours.</p>
+  <p class="sub">Themes, backgrounds, Inkblade as a worked example, and the files in ~/.config.</p>
+</section>
+<section class="slide close-card" data-notes="URL. Stop.">
+  <p class="overline">The rest of the book</p>
+  <h2>omarchy.org/manual</h2>
+  <p class="sub">Top bar, clipboard, screenshots, applications. Super+K for the rest.</p>
+  <p class="footnote">Ian McMurray · Five days to Omarchy · Day 3 of 5</p>
+</section>
+    </div>
+  </div>
+  <script src="../assets/js/deck.js"></script>
+</body>
+</html>
