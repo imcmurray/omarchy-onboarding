@@ -1,0 +1,114 @@
+[
+  {
+    "index": 1,
+    "id": "title",
+    "title": "Title",
+    "speak": "Welcome back. Night 2 of 5. Fifteen minutes. Live. Same Super key as last night.\n\nLast night I handed you four keys and sent you home. Super plus Space — the Omarchy menu, yesterday's Spotlight. Super plus K — the only hotkey you have to memorize. Super plus Return opens the terminal. Super plus Shift plus Return opens the browser. Super is the Windows key. If you did the homework, you already watched two windows share a screen without dragging a thing.\n\nHere is the part the wallpaper does not mention. On first boot of Omarchy, you cannot do a thing with the mouse alone. No dock. No desktop icons. Click the empty desktop. Nothing. The machine is not broken. It is waiting for your hands. Super plus Space still works. Super plus K still saves you when you blank.\n\nTonight the keyboard becomes the mouse. Everything happens via the keys. Everything. Let's move.",
+    "secondsHint": 66
+  },
+  {
+    "index": 2,
+    "id": "dwindle",
+    "title": "Dwindle",
+    "speak": "The default layout is dwindle. Every window on the workspace stays visible. You open a second one, they share. You open a third, they shrink. A fourth, they shrink again. Nothing hides under anything. There is no stack of dirty plates. There is no where-did-Slack-go. You can see the whole table.\n\nThat is the entire idea, and it sticks per workspace across reboot. Workspace one can be a browser and a note. Workspace two can be a forest of terminals. Each workspace remembers how it dwindled. You are not fighting a window manager that wants to maximize everything and make you mash Alt plus Tab like it is still 2004.\n\nHyprland is tiling the windows. Quickshell is drawing the chrome. Dwindle tells the truth: if it is on this workspace, you should be able to see it. If that feels cramped, good. That is last night's acquired taste. Open a couple of windows the way we did yesterday and look. They did not pile. They made room.",
+    "secondsHint": 72
+  },
+  {
+    "index": 3,
+    "id": "super-j",
+    "title": "Super+J",
+    "speak": "Two windows. Super plus J. Watch the split flip. Side by side, or stacked. Super plus J again. Back the other way. That is the reorient key. You are not dragging a seam. You are telling dwindle which way the cut goes.\n\nWhen the cut is right but the windows are in the wrong chairs, Super plus Shift plus arrow swaps them. Super plus Shift plus Right. Left. Up. Down. The focused window trades places with the neighbor in that direction.\n\nThis is the first navigation drill, and it is almost rude how little there is to it. Super plus J to reorient. Super plus Shift plus arrow to swap. Do it until your hands are bored. Bored hands are fluent hands.\n\nMac people: this is not Split View. Windows people: this is not Snap. The layout is already tiling. Super plus J just turns the cut.",
+    "secondsHint": 63
+  },
+  {
+    "index": 4,
+    "id": "super-arrow",
+    "title": "Super+Arrow",
+    "speak": "Focus with Super plus arrow. Super plus Right looks at the window to the right. Left, up, down — same idea. The focus moves, and the cursor jumps to the center of the new window. That last part matters. You are not hunting for a pointer left behind on the old pane. The mouse follows the work.\n\nAlt plus Tab still cycles the workspace if your fingers panic and reach for the old reflex. It works. I am not taking it away. It is just not the daily driver. Super plus arrow is. Directional. Honest. You look where you mean.\n\nTry it on those two windows. Super plus J until they sit how you like. Super plus arrow to hop. Notice the cursor teleport. That is the machine saying: you are here now. If you remember one motion from tonight besides the numbers, remember Super plus arrow.",
+    "secondsHint": 63
+  },
+  {
+    "index": 5,
+    "id": "workspaces",
+    "title": "Workspaces",
+    "speak": "macOS called them Spaces. Windows called them virtual desktops. Most people set them up once, forgot, and kept stacking windows on desktop one like a guilt pile. Omarchy makes you actually use them, because Super plus 1, 2, 3, 4 is instant. No animation delay. No trackpad swipe you overshoot. You are there.\n\nName them in your head. One is browse. Two is write. Three is chat. Four is music, or the thing you should not have open. The names are yours. The numbers are the contract.\n\nSuper plus Shift plus a number takes the focused window with you. You are on 1, the terminal should live on 2: Super plus Shift plus 2. You go with it. Add Alt if you want to send it and stay. Super plus Shift plus Alt plus 2 — the window leaves, you remain. That is throwing a roommate's laundry into their room and not following it in.\n\nFour workspaces is plenty for tonight. Super plus 1 through 4 is how you stop living in one crowded room.",
+    "secondsHint": 75
+  },
+  {
+    "index": 6,
+    "id": "scratchpad",
+    "title": "Scratchpad",
+    "speak": "Scratchpad is a Quake console for any window. Gamers of a certain age just sat up. Everyone else: it is a hidden overlay that drops in over whatever workspace you are on, then vanishes. Not a fifth workspace. A pocket.\n\nSuper plus S toggles it. Or Super plus Grave — grave, the backtick, top-left of the keyboard, the key nobody can name at a party. Both are first-class. Use whichever your hands like.\n\nTo throw something in, Super plus Alt plus S, or Super plus Shift plus Grave. Focus a window, toss it in the pocket, keep working. An agent terminal lives here happily. A notes window. A music player you do not want as a roommate on workspace one.\n\nWhen you want it back on a real workspace, yank it out with Super plus Shift plus 1 — or 2, or 3, or 4. Same take-a-window chord. The scratchpad is not a jail. It is a drawer. Park a terminal in there tonight.",
+    "secondsHint": 70
+  },
+  {
+    "index": 7,
+    "id": "groups",
+    "title": "Groups",
+    "speak": "Super plus G starts a group. Tabs, without the browser. The windows in that group share one tile. Super plus Control plus left and Super plus Control plus right walk the tabs inside it. Super plus G again tears the group down. Super plus Alt plus G plucks one window out and leaves the rest grouped.\n\nNew windows join the group while it is active, which is either magic or a trap, depending on whether you meant to do that.\n\nDo not live here on Night 2. I am showing you the closet so you know it exists when the coats pile up — three terminals that are really one job, a pair of docs you keep comparing. Tonight, dwindle and workspaces will carry you. If you mash Super plus G by accident, mash it again. Groups are a tool, not a lifestyle.",
+    "secondsHint": 61
+  },
+  {
+    "index": 8,
+    "id": "pop",
+    "title": "Pop",
+    "speak": "Super plus O pops a window out. Sticky. Floating. It follows you across workspaces like a well-trained thought. Video. A call. A reference pane you are quoting from while you write on workspace two. Always-on-top, if you came from that language. Pop, if you live here.\n\nSuper plus O again puts it back. Same chord. Toggle. It re-enters the tile like it never left.\n\nThis is the permission slip for the one window that should not dwindle. A meeting should not hide when you Super plus 3 over to notes. Pop it. Take it with you. Put it back when the call ends.\n\nDo not pop everything. Then you have floating chaos with extra steps, and we could have stayed on Windows. One sticky float is a craft. Six is a cry for help.",
+    "secondsHint": 57
+  },
+  {
+    "index": 9,
+    "id": "tile-float-full",
+    "title": "Tile / float / full",
+    "speak": "Super plus T toggles tile and float. A floating window is a guest. It sits where you put it and does not take a dwindle slice. Super plus T again tiles it back. If something opened floating and you wanted it in the grid, that is the key.\n\nSuper plus F is fullscreen. The window takes the display. Honest. Cinema. Super plus F again to leave.\n\nSuper plus Alt plus F is full width, and the bar stays. You keep the clock, the workspaces, the tray. You just gave the window every inch under the strip. That is the writing key. The I-still-want-to-know-what-time-it-is key.\n\nSuper plus Control plus F is fullscreen inside a window. The YouTube key. The player goes big inside the browser tile, and dwindle around it does not have to change. Three flavors of full, plus tile and float. You do not need a fourth tonight.",
+    "secondsHint": 64
+  },
+  {
+    "index": 10,
+    "id": "super-l",
+    "title": "Super+L",
+    "speak": "Super plus L flips a workspace to scrolling layout. Windows line up in a sideways strip that can run past the edge of the screen. You are not shrinking everyone to postage stamps. You are letting the extra ones live just offstage, and you page through them.\n\nPer workspace, and it remembers. The example I want in your head: workspace one dwindle for browsing, workspace two scrolling for code. A browser wants to see its roommate. A row of editors and terminals wants a runway.\n\nSuper plus L again brings dwindle back. Toggle. You did not break the machine.\n\nThe default — which layout a new workspace starts in — lives in looknfeel.lua. That is Night 4's folder, ~/.config, the files that are actually yours. Tonight you just need the chord. Super plus L. Try it on workspace two. Feel the strip.",
+    "secondsHint": 61
+  },
+  {
+    "index": 11,
+    "id": "translation",
+    "title": "Translation",
+    "speak": "Translation table. Where your old reflexes go, so they stop yelling.\n\nSpotlight, Raycast, the Start menu — that reach is Super plus Space. The Omarchy menu. Yesterday. Still true.\n\nSpaces, virtual desktops — Super plus 1 through 4. You will actually use them because the chord is instant.\n\nSnap, Split View, throw-the-window-at-a-corner — tiling already did that. Super plus J reorients the cut. Super plus Shift plus arrow swaps the chairs.\n\nAlways-on-top — Super plus O. Pop. Sticky float. Follows you.\n\nOn Mac hardware, the key you called Cmd is Super. Linux already treats Command as Super, so your thumb does not have to move. I am saying Cmd once, as a translation, and then I am done. Say Super.\n\nClose is Super plus W, or Super plus Q if your Mac finger memory is loud. Last night: gone is gone. Five rows. Then your hands.",
+    "secondsHint": 63
+  },
+  {
+    "index": 12,
+    "id": "mouse",
+    "title": "Mouse",
+    "speak": "The mouse is not banned. I need you to hear that before the homework, because someone in this live chat is already writing a manifesto about purity.\n\nSuper plus left drag moves a window. Super plus right drag resizes it. Super plus scroll wheel walks workspaces. The modifier is Super. You are not clicking empty desktop hoping for a menu. You are using the pointer as a tool, with the same key that runs the rest of the machine.\n\nHomework is mouse-light, not mouse-shame. I am not taking the Logitech. I am asking you to let the keys be the default for a day, so Super plus arrow has a chance to become a reflex instead of a party trick. If you resize because the tile is ugly, good. That is craft.",
+    "secondsHint": 57
+  },
+  {
+    "index": 13,
+    "id": "recap",
+    "title": "Recap",
+    "speak": "Recap. Air-tap if you want. I will go once.\n\nSuper plus J reorients the dwindle cut. Super plus Shift plus arrow swaps windows. Super plus arrow focuses, and the cursor jumps to the center. Alt plus Tab still cycles if you panic.\n\nSuper plus 1 through 4 jumps workspaces. Super plus Shift plus a number takes the window with you. Add Alt to send and stay.\n\nSuper plus S, or Super plus Grave — grave, the backtick — toggles the scratchpad. Super plus Alt plus S throws a window in. Super plus Shift plus 1 yanks it onto workspace one.\n\nSuper plus O pops a sticky float. Super plus L flips scrolling layout. Super plus T tile or float. Super plus F fullscreen. Super plus Alt plus F full width, bar stays. Super plus Control plus F, the YouTube key.\n\nGroups exist. Super plus G. Do not live there tonight. If you remember Super plus arrow and Super plus 1 through 4, Night 2 worked.",
+    "secondsHint": 71
+  },
+  {
+    "index": 14,
+    "id": "homework",
+    "title": "Homework",
+    "speak": "Homework. A mouse-light day. Not a vow of silence. A day.\n\nWork from four workspaces. Name them in your head. Browse, write, chat, other. Super plus 1 through 4 until the numbers feel like rooms.\n\nPark a terminal on the scratchpad. Super plus Return to open it, Super plus Alt plus S to throw it in, Super plus S to peek when you need a shell. Yank it out with Super plus Shift plus 1 if it deserves a real seat.\n\nPop one window. Fullscreen one window. Come back. Super plus O, Super plus F, the reverse chords to leave.\n\nWhen you blank — and you will blank — Super plus K. Ask the machine. Do not open a wiki. Do not apologize in the Discord yet. Super plus K, scroll, try the chord, keep going. Show up tomorrow with opinions about dwindle. I want the opinions.",
+    "secondsHint": 63
+  },
+  {
+    "index": 15,
+    "id": "tomorrow",
+    "title": "Tomorrow",
+    "speak": "Tomorrow is Night 3. The working desktop. Yesterday we moved. Tomorrow we work.\n\nThe bar — Quickshell, not a bolted-on status strip. A clipboard that uses Super plus C and Super plus V even in the terminal, which is the conversion moment for anyone who has ever lost a copy to Control plus C folklore. Screenshots. A thirty-second recording. The apps you actually live in.\n\nSame time tomorrow. Live. Same fifteen minutes. Do the mouse-light day so Night 3 is not you still hunting for a dock. The dock is not coming. The bar is.",
+    "secondsHint": 41
+  },
+  {
+    "index": 16,
+    "id": "manual",
+    "title": "Manual",
+    "speak": "omarchy.org/manual. The live Quattro manual is the rest of the book. Navigation chapter, then Hotkeys. Every chord I skipped lives there, including the ones I refused to invent on camera.\n\nSuper plus K when the slide is gone. Discord, channel omarchy-help, if you are actually stuck — not if you are merely annoyed that the mouse does nothing on an empty desktop. That is the point. That was the cold open.\n\nThis was Night 2 of 5. The keyboard is the mouse now. Same time tomorrow. Go dwindle something.",
+    "secondsHint": 38
+  }
+]
