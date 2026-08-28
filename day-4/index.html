@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Day 4 · Make it yours — Omarchy onboarding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/inkblade.css"/>
+  <link rel="stylesheet" href="../assets/css/deck.css"/>
+</head>
+<body class="deck" data-day="4" data-title="Make it yours">
+  <div class="stage">
+    <div class="ink-corner tl"></div>
+    <div class="ink-corner br"></div>
+    <div class="chrome">
+      <div class="progress"><i></i></div>
+      <div class="meta"><span class="day">Day 4</span><span class="count"></span></div>
+      <div class="hint">Space next · S notes · F full</div>
+    </div>
+    <div class="slides">
+<section class="slide title-card active" data-notes="Inkblade is the worked example — your theme. Don't oversell; install it live if you can.">
+  <img class="hero-img" src="../assets/img/2-paper-seated.jpg" alt="" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/imcmurray/omarchy-inkblade-theme/main/backgrounds/2-paper-seated.jpg'"/>
+  <p class="overline">Day 4 · Fifteen minutes</p>
+  <h1>Make it yours.</h1>
+  <p class="lede">Themes first. Then the files that are actually yours.</p>
+</section>
+<section class="slide" data-notes="Obsidian needs the Omarchy theme picked inside the app. Extra themes: omarchy.org/themes.">
+  <p class="overline">Twenty-two shipped</p>
+  <h2>Pick a world in one chord.</h2>
+  <div class="hotkey-row">
+    <div class="pair"><span class="lbl">Theme picker</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Ctrl</kbd><span class="plus">+</span><kbd class="wide">Shift</kbd><span class="plus">+</span><kbd class="wide">Space</kbd></span></div>
+    <div class="pair"><span class="lbl">Backgrounds</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Ctrl</kbd><span class="plus">+</span><kbd class="wide">Space</kbd></span></div>
+  </div>
+  <p class="sub">Also Style → Theme in the menu. Desktop, terminal, Neovim, Chromium, the whole shell.</p>
+</section>
+<section class="slide" data-notes="Do this live. Installed themes keep colours; they drop .lua / terminal configs / vscode.json so a theme can't run code.">
+  <p class="overline">Worked example</p>
+  <h2>Install Inkblade.</h2>
+  <code class="cmd-block">omarchy theme install https://github.com/imcmurray/omarchy-inkblade-theme</code>
+  <p class="sub">Or Install → Style → Theme and paste that URL. Then pick it from the theme list.</p>
+</section>
+<section class="slide" data-notes="Quattro ships Omarchy as pacman packages. Old ~/.local/share/omarchy path is stale.">
+  <p class="overline">The rule</p>
+  <p class="one-line">~/.config is yours. /usr/share/omarchy is the package.</p>
+  <p class="sub">Overwrite in ~/.config. Never edit the share tree — the next update will just put it back.</p>
+</section>
+<section class="slide" data-notes="Control Panel translation. Default editor is Neovim. Super+Space, type setup.">
+  <p class="overline">Setup menu</p>
+  <h2>Don't hunt for files. Ask Setup.</h2>
+  <ul class="sparse">
+    <li>Setup → Monitors, Keybindings, Input</li>
+    <li>Setup → Config → the file you mean</li>
+    <li>Quit the editor (:wq) and Omarchy restarts what must restart</li>
+  </ul>
+</section>
+<section class="slide" data-notes="Lua in Quattro, not the old .conf. hl.unbind then o.bind to swap bindings.">
+  <p class="overline">Hyprland</p>
+  <h2>hyprland.lua loads your overrides.</h2>
+  <ul class="sparse">
+    <li><span class="cmd">~/.config/hypr/hyprland.lua</span> — the main file</li>
+    <li><span class="cmd">bindings.lua</span> — keys you add or unbind</li>
+    <li><span class="cmd">monitors.lua</span> — displays, scale, position</li>
+    <li><span class="cmd">looknfeel.lua</span> — gaps, borders, layout default</li>
+  </ul>
+</section>
+<section class="slide" data-notes="Drag empty space to move the bar. omarchy bar position bottom. Idle timings in the same file.">
+  <p class="overline">The shell</p>
+  <h2>shell.json is the bar — once you touch it.</h2>
+  <p class="sub"><span class="cmd">~/.config/omarchy/shell.json</span> becomes canonical the moment you drag a widget. New defaults won't appear until you <span class="cmd">omarchy bar defaults</span>.</p>
+</section>
+<section class="slide" data-notes="Omarchy will stop a raw pacman -Syu. Snapshots restore /root, not /home.">
+  <p class="overline">Updates</p>
+  <h2>One command. Snapshot first.</h2>
+  <ul class="sparse">
+    <li>Update → Omarchy — or the badge by the clock</li>
+    <li>Don't freelance <span class="cmd">pacman -Syu</span></li>
+    <li>Broken? Reboot and pick the snapshot in Limine</li>
+  </ul>
+</section>
+<section class="slide" data-notes="reinstall overwrites user config. Say that out loud.">
+  <p class="overline">If you make a mess</p>
+  <ul class="sparse">
+    <li>Update → Config resets one file</li>
+    <li><span class="cmd">omarchy reinstall configs</span> resets all of them</li>
+    <li><span class="cmd">omarchy reinstall</span> is the big red lever</li>
+  </ul>
+</section>
+<section class="slide" data-notes="JetBrainsMono Nerd Font is the default.">
+  <p class="overline">Type</p>
+  <h2>The font is a menu item.</h2>
+  <p class="sub">Style → Font. JetBrainsMono Nerd Font out of the box. Extra programming fonts under Install → Style → Font.</p>
+</section>
+<section class="slide" data-notes="Joplin-for-Obsidian example from the Quattro dotfiles chapter. Setup → Keybindings opens this file.">
+  <p class="overline">bindings.lua</p>
+  <h2>Unbind, then bind.</h2>
+  <code class="cmd-block">hl.unbind("SUPER + SHIFT + O")
+o.bind("SUPER + SHIFT + O", "Joplin", "joplin-desktop")</code>
+  <p class="sub">Setup → Keybindings opens the file. :wq restarts what must restart.</p>
+</section>
+<section class="slide" data-notes="Inkblade URL once more if they missed it.">
+  <p class="overline">Recap</p>
+  <h2>Style is a hotkey. Config is a folder.</h2>
+  <div class="hotkey-row">
+    <div class="pair"><span class="lbl">Theme</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Ctrl</kbd><span class="plus">+</span><kbd class="wide">Shift</kbd><span class="plus">+</span><kbd class="wide">Space</kbd></span></div>
+    <div class="pair"><span class="lbl">Background</span><span class="keys"><kbd class="wide">Super</kbd><span class="plus">+</span><kbd class="wide">Ctrl</kbd><span class="plus">+</span><kbd class="wide">Space</kbd></span></div>
+  </div>
+  <p class="sub">Edit ~/.config. Leave /usr/share/omarchy alone.</p>
+</section>
+<section class="slide" data-notes="Good first edits: looknfeel.lua gaps, or a single binding.">
+  <p class="overline">Homework</p>
+  <h2>One look. One file.</h2>
+  <ol class="hw">
+    <li>Switch theme — Inkblade, or anything that makes you stay.</li>
+    <li>Change one official config via Setup. Save. Come back.</li>
+  </ol>
+</section>
+<section class="slide" data-notes="Series close tomorrow. Keep it warm.">
+  <p class="overline">Tomorrow · Day 5</p>
+  <p class="one-line">Own the machine.</p>
+  <p class="sub">The omarchy CLI, AI and Herdr, making a theme, snapshots, the encryption bargain.</p>
+</section>
+<section class="slide close-card" data-notes="URL. Stop.">
+  <p class="overline">The rest of the book</p>
+  <h2>omarchy.org/manual</h2>
+  <p class="sub">Themes, dotfiles, updates. omarchy.org/themes for the extra shelf.</p>
+  <p class="footnote">Ian McMurray · Five days to Omarchy · Day 4 of 5</p>
+</section>
+    </div>
+  </div>
+  <script src="../assets/js/deck.js"></script>
+</body>
+</html>
