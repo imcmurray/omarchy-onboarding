@@ -1,0 +1,122 @@
+body.hub {
+  min-height: 100%;
+  background: var(--darker);
+  cursor: auto;
+  user-select: text;
+}
+.hub-hero {
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 8vh 8vw 7vh;
+  background-image:
+    linear-gradient(180deg, rgba(8,7,7,.2) 0%, rgba(18,17,16,.72) 55%, var(--darker) 100%),
+    url("../img/0-combat.jpg"),
+    url("https://raw.githubusercontent.com/imcmurray/omarchy-inkblade-theme/main/backgrounds/0-combat.jpg");
+  background-position: center, center 18%, center 18%;
+  background-size: auto, cover, cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.hub-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 8vw, 112px);
+  font-weight: 500;
+  line-height: .9;
+  color: var(--bright);
+  max-width: 12ch;
+  margin: .2em 0 0;
+}
+.hub-hero .lede {
+  font-size: clamp(20px, 2.2vw, 32px);
+  max-width: 34ch;
+}
+.hub-wrap {
+  width: min(1180px, 92vw);
+  margin: 0 auto;
+  padding: 4vh 0 10vh;
+}
+.days {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin: 2.4em 0 3em;
+}
+.day-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+  padding: 1.25em 1.2em 1.3em;
+  background: var(--bg);
+  border: 1px solid var(--hairline);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color .2s, transform .2s;
+}
+.day-card:hover { border-color: var(--accent); transform: translateY(-2px); color: inherit; }
+.day-card .n {
+  font-family: var(--font-label);
+  letter-spacing: .24em;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+}
+.day-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  margin: .45em 0 .4em;
+  font-weight: 500;
+  color: var(--bright);
+}
+.day-card p { margin: 0; color: var(--muted); line-height: 1.4; font-size: .95rem; flex: 1; }
+.day-card .go {
+  margin-top: 1.1em;
+  font-family: var(--font-label);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: var(--paper);
+}
+.how, .present {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 3em 0;
+}
+.how h3, .present h3, .series h3 {
+  font-family: var(--font-label);
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-size: 13px;
+  margin: 0 0 1em;
+}
+.how p, .present p, .series p { color: var(--fg); line-height: 1.55; margin: 0 0 .8em; }
+.how ul, .present ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.how li, .present li {
+  padding: .4em 0;
+  border-bottom: 1px solid var(--hairline);
+  color: var(--fg);
+}
+.foot {
+  margin-top: 4em;
+  padding-top: 1.4em;
+  border-top: 1px solid var(--hairline);
+  color: var(--muted);
+  font-size: .9rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+@media (max-width: 960px) {
+  .days { grid-template-columns: 1fr 1fr; }
+  .how, .present { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) { .days { grid-template-columns: 1fr; } }
